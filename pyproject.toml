@@ -1,14 +1,18 @@
 [tool.poetry]
-name = "tormon"
+name = "exporter"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Henk Vires <noreply@plebian.nl>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11"
-influxdb = "^5.3.2"
-stem = "^1.8.2"
+python = "^3.11"
+stem = ">=1.8.0.dev0"
+influxdb = ">=5.3"
+
+
+[tool.poetry.scripts]
+application = "exporter.main:main"
 
 
 [build-system]
